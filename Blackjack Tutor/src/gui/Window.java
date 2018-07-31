@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.GridBagLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -42,20 +43,20 @@ public class Window extends JFrame{
 		//Dealer Pane
 		dealerCards = new JPanel();
 		dealerCards.setMaximumSize(new Dimension(getWidth(), 450));
-		dealerCards.setLayout(new BoxLayout(dealerCards, BoxLayout.X_AXIS));
+		dealerCards.setLayout(new GridBagLayout());
 		dealerCards.setBackground(Color.GREEN.darker().darker());
 		dealerCards.setAlignmentX(.5f);
 		
 		//Player Pane
 		playerCards = new JPanel();
 		playerCards.setMaximumSize(new Dimension(getWidth(), 450));
-		playerCards.setLayout(new BoxLayout(playerCards, BoxLayout.X_AXIS));
+		playerCards.setLayout(new GridBagLayout());
 		playerCards.setBackground(Color.GREEN.darker().darker());
 		
 		//Buttons Pane
 		JPanel buttonsPane = new JPanel();
 		buttonsPane.setMaximumSize(new Dimension(getWidth(), 100));
-		buttonsPane.setLayout(new BoxLayout(buttonsPane, BoxLayout.X_AXIS));
+		buttonsPane.setLayout(new GridBagLayout());
 		buttonsPane.setBackground(Color.GREEN.darker().darker());
 		
 		JButton hit = new JButton("Hit");
